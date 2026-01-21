@@ -25,9 +25,10 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         img { max-width: 100%; height: auto; display: block; border-radius: 12px; }
 
+        /* 헤더 높이 축소 유지 */
         header {
             background: rgba(255, 255, 255, 0.98);
-            padding: 10px 0;
+            padding: 5px 0; 
             position: fixed;
             width: 100%;
             top: 0;
@@ -36,9 +37,9 @@
         }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
         
-        /* 1. 로고 이미지 사이즈 확대 (90px) */
+        /* 상단 로고 크기 축소 유지 */
         .logo img { 
-            height: 90px; 
+            height: 65px; 
             width: auto;
             border-radius: 0; 
         }
@@ -51,7 +52,6 @@
         .section-title h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 15px; font-weight: 900; }
         .accent-bar { width: 40px; height: 4px; background: var(--accent); margin: 0 auto; }
 
-        /* 2. 메인 배경(Hero) 높이 사이즈 축소 (40vh) */
         .hero {
             height: 40vh; 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -61,7 +61,7 @@
             display: flex;
             align-items: center;
             color: white;
-            padding-top: 110px; /* 로고가 커진 만큼 본문 위치 조정 */
+            padding-top: 80px;
         }
         .hero h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; font-weight: 900; width: 100%; text-align: center; }
 
@@ -70,24 +70,19 @@
         .about-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); font-weight: 800; }
 
         .patents { background: #fff; border-top: 1px solid #eee; }
-        .patent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .patent-single { max-width: 800px; margin: 0 auto; text-align: center; }
         .patent-item { 
             background: var(--bg-light); 
-            padding: 30px; 
+            padding: 40px; 
             border-radius: 15px; 
-            text-align: center;
             border: 1px dashed var(--accent);
         }
         .patent-img-box {
             width: 100%;
-            height: 200px;
-            background: #e2e8f0; 
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-bottom: 25px;
             border-radius: 10px;
             overflow: hidden;
+            background: #fff;
         }
 
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
@@ -114,11 +109,12 @@
         }
 
         footer { background: #0a0a0a; color: rgba(255,255,255,0.4); padding: 50px 20px; text-align: center; font-size: 13px; }
+        .footer-info { line-height: 2; margin-bottom: 10px; }
 
         @media (max-width: 768px) {
             .hero { height: 35vh; min-height: 250px; }
             .hero h1 { font-size: 2rem; }
-            .logo img { height: 60px; } 
+            .logo img { height: 50px; } 
             .about-grid, .safety-grid { grid-template-columns: 1fr; }
             nav ul { gap: 10px; }
             nav a { font-size: 12px; }
@@ -130,7 +126,7 @@
     <header>
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="https://lh3.googleusercontent.com/d/1pZM7GR2cIOSyjLQNymEkteFnBb2fCKUO" alt="(주)거왕 로고">
+                <img src="https://drive.google.com/thumbnail?id=1rHFEtapwtGODflL0idNMUhsEJsnXf-lK&sz=w1000" alt="(주)거왕 로고">
             </a>
             <nav>
                 <ul>
@@ -153,7 +149,7 @@
         <div class="container">
             <div class="about-grid">
                 <div>
-                    <img src="https://lh3.googleusercontent.com/d/1vo0X_4yBEFOqQPrM-PzUKQ0vkOJDvMzf" alt="거왕 현장 사진">
+                    <img src="https://drive.google.com/thumbnail?id=1SkF7zRWApEVCgDH0Pqk43qCFdT2W028u&sz=w1000" alt="거왕 현장 사진">
                 </div>
                 <div class="about-text">
                     <h3>저희 거왕을 선택하는 이유</h3>
@@ -173,20 +169,13 @@
             </div>
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">끊임없는 기술 개발로 더 안전하고 조용한 철거 환경을 만듭니다.</p>
             
-            <div class="patent-grid">
+            <div class="patent-single">
                 <div class="patent-item">
                     <div class="patent-img-box">
-                        <span style="color: #94a3b8;">특허 이미지 1 (준비중)</span>
+                        <img src="https://drive.google.com/thumbnail?id=1dlz8MmL9SNqNje-zvZswuLj2r_z8VR97&sz=w1000" alt="거왕 특허증">
                     </div>
-                    <h4 style="margin-bottom: 10px;">저소음·저진동 해체 공법</h4>
-                    <p style="font-size: 14px; color: var(--text-muted);">도심지 작업 시 발생하는 소음과 진동을 획기적으로 줄이는 특허 기술입니다.</p>
-                </div>
-                <div class="patent-item">
-                    <div class="patent-img-box">
-                        <span style="color: #94a3b8;">특허 이미지 2 (준비중)</span>
-                    </div>
-                    <h4 style="margin-bottom: 10px;">비산먼지 억제 시스템</h4>
-                    <p style="font-size: 14px; color: var(--text-muted);">미세먼지 배출을 최소화하여 인근 주민의 불편을 해소하고 환경을 보호합니다.</p>
+                    <h4 style="margin-bottom: 10px;">저소음·저진동 및 비산먼지 억제 공법</h4>
+                    <p style="font-size: 15px; color: var(--text-muted);">도심지 작업의 한계를 극복하는 거왕만의 특허 기술로 소음을 줄이고 환경을 보호합니다.</p>
                 </div>
             </div>
         </div>
@@ -217,7 +206,7 @@
             </div>
             <div class="safety-grid">
                 <div class="safety-box">
-                    <img src="https://lh3.googleusercontent.com/d/18Qo8N_-7eJZdIn-Zk7bTqLaLDiXZsWm4" style="border-radius: 0; height: 250px; width: 100%; object-fit: cover;">
+                    <img src="https://drive.google.com/thumbnail?id=1643W8IzRcqbTd7z4SbCo0-6pgO8P85x9&sz=w1000" style="border-radius: 0; height: 250px; width: 100%; object-fit: cover;" alt="스마트 안전 시스템">
                     <div class="safety-content">
                         <h4>스마트 안전 시스템</h4>
                         <p>작업 전 위험성 평가와 실시간 모니터링으로 무재해 현장을 실현합니다.</p>
@@ -245,8 +234,10 @@
 
     <footer>
         <div class="container">
-            <p><b>(주)거왕</b> | 대표이사: 임영순 | 이메일: daka9118@naver.com</p>
-            <p style="margin-top: 5px;">본사: 경기도 평택시 참이슬1길 21 1층</p>
+            <div class="footer-info">
+                <p><b>(주)거왕</b> | 대표이사: 임영순 | 사업자등록번호: 131311-0326756</p>
+                <p>이메일: daka9118@naver.com | 본사: 경기도 평택시 참이슬1길 21 1층</p>
+            </div>
             <p style="margin-top: 20px; opacity: 0.2;">© 2026 GEOWANG. All Rights Reserved.</p>
         </div>
     </footer>
