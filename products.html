@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>특허기술 | DES 공법</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; line-height: 1.6; }
+        header { background: #002d56; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: bold; }
+        .container { padding: 50px; max-width: 1100px; margin: auto; }
+        h2 { border-bottom: 2px solid #002d56; padding-bottom: 10px; color: #002d56; display: inline-block; }
+        
+        /* [수정] 이미지 크기 제한 */
+        .about-grid { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .about-grid > div { flex: 1; min-width: 300px; text-align: center; }
+        .about-grid img { 
+            max-width: 100%; 
+            max-height: 400px; 
+            width: auto; 
+            border-radius: 10px; 
+        }
+        
+        /* [수정] 섹션 가운데 정렬 */
+        .section { text-align: center; margin-top: 60px; }
+        .section-title { margin-bottom: 20px; }
+        .patent-single { display: flex; justify-content: center; }
+        .patent-item { max-width: 600px; text-align: center; }
+        .patent-img-box img { max-width: 100%; height: auto; border-radius: 8px; }
+
+        .brand-section { background: #f9f9f9; padding: 30px; margin-top: 40px; border-radius: 10px; }
+
+        /* 공통 푸터 스타일 (가운데 정렬) */
+        footer {
+            background: #f4f4f4;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem; 
+            color: #555;
+        }
+        .footer-info-row { 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+        }
+        .footer-info-row b { color: #333; font-weight: 700; }
+        .copyright { margin-top: 15px; color: #888; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="cursor:pointer;" onclick="location.href='main.html'">주식회사 거왕</div>
+        <nav>
+            <a href="main.html">HOME</a>
+            <a href="about.html">회사소개</a>
+            <a href="products.html">특허기술</a>
+            <a href="tech.html">서비스</a>
+            <a href="contact.html">고객문의</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="section about" id="about">
+            <div class="about-grid">
+                <div>
+                    <img src="https://github.com/Hong-gghdd/geowang/blob/main/10.png?raw=true" alt="거왕 현장 사진">
+                </div>
+                <div class="about-text" style="text-align: left;">
+                    <h3>저희 거왕을 선택하는 이유</h3>
+                    <p><strong>"거왕은 단순한 철거를 넘어, 특허받은 공법과 베테랑의 기술로 사고 없는 완벽한 현장을 자신 있게 약속합니다."</strong></p>
+                    <p>1. 비산먼지와 소음을 획기적으로 줄인 **DES 친환경·안전 해체 공법(특허 제10-2632152호)**을 적용하여, 민원 걱정 없는 쾌적하고 안전한 작업 환경을 보장합니다.</p>
+                    <p>2. 시간당 220톤 파쇄가 가능한 이동식 콘크라샤(QH331) 등 최신 장비를 직접 운용하여 공기를 단축하고 시공의 정밀도를 높입니다.</p>
+                    <p>3. 굴착기, 거푸집기능사 등 분야별 국가기술자격을 보유한 베테랑 전문가들이 모든 공정을 현장에서 직접 지휘하여 기술적 완성도를 높입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section patents" id="patents">
+            <div class="section-title">
+                <h2>거왕만의 독보적인 특허 기술</h2>
+            </div>
+            <p style="margin-bottom: 40px;">끊임없는 기술 개발로 더 안전하고 조용한 철거 환경을 만듭니다.</p>
+            
+            <div class="patent-single">
+                <div class="patent-item">
+                    <div class="patent-img-box">
+                        <img src="https://drive.google.com/thumbnail?id=1dlz8MmL9SNqNje-zvZswuLj2r_z8VR97&sz=w1000" alt="거왕 특허증">
+                    </div>
+                    <h4 style="margin: 15px 0;">특허 제10-2632152호: DES공법</h4>
+                    <p style="font-size: 15px;">안전성: 물분사 작업원이 불필요한 자동 제어 시스템으로 현장 인명 사고 위험을 원천 차단합니다.</p>
+                    <p style="font-size: 15px;">친환경: 장비 집게부에서 직접 미세 물분사를 실행하여 비산먼지 발생을 90% 이상 억제합니다.</p>
+                    <p style="font-size: 15px;">경제성: 폐기물 현장 파쇄 및 분류 시스템으로 운반비와 처리 비용을 획기적으로 낮춥니다.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <p><b>(주)거왕</b></p>
+                <div class="footer-info-row">
+                    <span>대표이사: 임영순</span>
+                    <span>주소: 경기도 평택시 참이슬1길 21 1층</span>
+                </div>
+                <div class="footer-info-row">
+                    <span>Email: daka9118@naver.com</span>
+                </div>
+                <p class="copyright">© 2026 GEOWANG. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

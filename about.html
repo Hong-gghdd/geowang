@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회사소개 | (주)거왕</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; line-height: 1.6; }
+        header { background: #002d56; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: bold; }
+        .container { padding: 50px; max-width: 1000px; margin: auto; }
+        .company-info { display: flex; gap: 40px; margin-top: 30px; text-align: left; }
+        .info-box { flex: 1; border: 1px solid #ddd; padding: 20px; border-radius: 10px; }
+        h2 { border-bottom: 2px solid #002d56; padding-bottom: 10px; color: #002d56; }
+        
+        /* 이미지 스타일 */
+        .image-section { margin-top: 50px; text-align: left; }
+        .image-section img { width: 100%; max-width: 800px; display: block; margin: 20px 0; border-radius: 10px; }
+
+        /* 공통 푸터 스타일 (가운데 정렬) */
+        footer {
+            background: #f4f4f4;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem; 
+            color: #555;
+        }
+        .footer-info-row { 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+        }
+        .footer-info-row b { color: #333; font-weight: 700; }
+        .copyright { margin-top: 15px; color: #888; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="cursor:pointer;" onclick="location.href='main.html'">주식회사 거왕</div>
+        <nav>
+            <a href="main.html">HOME</a>
+            <a href="about.html">회사소개</a>
+            <a href="products.html">특허기술</a>
+            <a href="tech.html">서비스</a>
+            <a href="contact.html">고객문의</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Company Overview</h2>
+        <div class="company-info">
+            <div class="info-box">
+                <h3>주식회사 거왕</h3>
+                <p><strong>대표자:</strong> 임영순</p>
+                <p><strong>설립일:</strong> 2024. 08. 21</p>
+                <p><strong>주요사업:</strong> 공장⬝상가⬝주택 철거</p>
+                <p><strong>주소:</strong> 경기도 평택시 참이슬1길 21 1층</p>
+            </div>
+        </div>
+        
+        <div class="image-section">
+            <img src="https://github.com/Hong-gghdd/geowang/blob/main/4.png?raw=true" alt="조직 구성">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <p><b>(주)거왕</b></p>
+                <div class="footer-info-row">
+                    <span>대표이사: 임영순</span>
+                    <span>주소: 경기도 평택시 참이슬1길 21 1층</span>
+                </div>
+                <div class="footer-info-row">
+                    <span>Email: daka9118@naver.com</span>
+                </div>
+                <p class="copyright">© 2026 GEOWANG. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
