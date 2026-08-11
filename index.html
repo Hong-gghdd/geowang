@@ -2,35 +2,38 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>철거의 기준은 이제 거왕입니다.</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap" rel="stylesheet">
     <style>
+        /* 기본 설정 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
+        html, body { 
+            width: 100%;
+            height: 100%;
             font-family: 'Noto Sans KR', sans-serif; 
             background: #000; 
-            min-height: 100vh;
-            min-height: 100dvh;
+            overflow-x: hidden;
+        }
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
             position: relative;
+            min-height: 100vh;
         }
         .blue-text {
             color: #007bff;
         }
 
-        /* 슬라이드 영역: pointer-events를 주어 클릭이나 터치를 방해하지 않도록 설정 */
+        /* [이미지 관련 코드] 구조 유지 */
         .slideshow-container { 
-            position: absolute; 
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%; 
             height: 100%; 
             z-index: 1; 
-            pointer-events: none; 
         }
         .slideshow-container img {
             position: absolute; 
@@ -42,16 +45,17 @@
         }
         .slideshow-container img.active { opacity: 1; }
 
-        /* 중앙 콘텐츠 영역: z-index를 높여 무조건 맨 위에 오도록 설정 */
+        /* 중앙 콘텐츠 영역 (모바일 잘림 방지 구조 개선) */
         .content {
             position: relative;
             text-align: center;
             color: white; 
-            z-index: 10; 
+            z-index: 100; 
             width: 100%;
             padding: 20px;
         }
 
+        /* 주식회사 거왕 스타일 */
         .content h1 { 
             font-size: 3.5rem; 
             font-weight: 900; 
@@ -67,6 +71,7 @@
             text-shadow: 2px 2px 10px rgba(0,0,0,1);
         }
 
+        /* ENTER SITE 버튼 스타일 */
         .enter-btn { 
             display: inline-block; 
             padding: 20px 70px; 
@@ -88,10 +93,11 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.8);
         }
 
+        /* 모바일 최적화 미디어쿼리 */
         @media (max-width: 768px) {
-            .content h1 { font-size: 2.2rem; }
-            .content p { font-size: 1.1rem; margin-bottom: 30px; }
-            .enter-btn { padding: 15px 45px; font-size: 1rem; }
+            .content h1 { font-size: 2rem; }
+            .content p { font-size: 1rem; margin-bottom: 25px; }
+            .enter-btn { padding: 14px 40px; font-size: 1rem; }
         }
     </style>
 </head>
@@ -113,6 +119,7 @@
         let currentIdx = 0;
         const imgs = document.getElementById('slideshow').getElementsByTagName('img');
         
+        // 슬라이드 간격 3초(3000ms)
         setInterval(() => {
             imgs[currentIdx].classList.remove('active');
             currentIdx = (currentIdx + 1) % imgs.length;
@@ -122,3 +129,4 @@
 
 </body>
 </html>
+```[cite: 1]
